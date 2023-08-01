@@ -4,7 +4,10 @@
  */
 package jdbcapp;
 
-import java.util.Scanner;
+import UserDao.UserDaoInter;
+import UserDaoImpl.UserDao;
+import bean.User;
+import java.util.List;
 
 /**
  *
@@ -17,6 +20,9 @@ public class JdbcApp {
 
     public static void main(String[] args) throws Exception {
     
+        UserDaoInter user=new UserDao();
+        List<User> list=user.getAll();
+        System.out.println(list);
     }
 }    
     

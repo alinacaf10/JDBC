@@ -14,6 +14,8 @@ public class User {
     private int id;
     private String name;
     private String surname;
+    private String phone;
+    private String email;
     private int age;
     private Date birthDate;
     private Nationality nationality;
@@ -22,15 +24,34 @@ public class User {
     public User() {
     }
 
-    public User(int id, String name, String surname, int age, Date birthDate, Nationality nationality, Nationality birthPlace) {
+    public User(int id, String name, String surname, String phone, String email, int age, Date birthDate, Nationality nationality, Nationality birthPlace) {
         this.id = id;
         this.name = name;
         this.surname = surname;
+        this.phone = phone;
+        this.email = email;
         this.age = age;
         this.birthDate = birthDate;
         this.nationality = nationality;
         this.birthPlace = birthPlace;
     }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
 
     public Date getBirthDate() {
         return birthDate;
@@ -92,9 +113,10 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + ", birthDate=" + birthDate + ", nationality=" + nationality + ", birthPlace=" + birthPlace + '}';
+        return "User{" + "id=" + id + ", name=" + name + ", surname=" + surname + ", phone=" + phone + ", email=" + email + ", age=" + age + ", birthDate=" + birthDate + ", nationality=" + nationality + ", birthPlace=" + birthPlace + '}'+"\n";
     }
 
+    
     
     
 }

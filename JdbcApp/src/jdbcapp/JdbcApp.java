@@ -21,8 +21,7 @@ public class JdbcApp {
     public static void main(String[] args) throws Exception {
     
         UserDaoInter user=new UserDao();
-        List<User> list=user.getAll();
-        System.out.println(list);
+        System.out.println(user.getAll());
     }
 }    
     

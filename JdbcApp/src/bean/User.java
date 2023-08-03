@@ -4,6 +4,8 @@
  */
 package bean;
 
+import java.sql.Date;
+
 /**
  *
  * @author HP
@@ -13,16 +15,48 @@ public class User {
     private String name;
     private String surname;
     private int age;
+    private Date birthDate;
+    private Nationality nationality;
+    private Nationality birthPlace;
 
     public User() {
     }
 
-    public User(int id, String name, String surname, int age) {
+    public User(int id, String name, String surname, int age, Date birthDate, Nationality nationality, Nationality birthPlace) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.age = age;
+        this.birthDate = birthDate;
+        this.nationality = nationality;
+        this.birthPlace = birthPlace;
     }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public Nationality getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(Nationality nationality) {
+        this.nationality = nationality;
+    }
+
+    public Nationality getBirthPlace() {
+        return birthPlace;
+    }
+
+    public void setBirthPlace(Nationality birthPlace) {
+        this.birthPlace = birthPlace;
+    }
+
+   
 
     public int getId() {
         return id;
@@ -58,8 +92,9 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + '}'+"\n";
+        return "User{" + "id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + ", birthDate=" + birthDate + ", nationality=" + nationality + ", birthPlace=" + birthPlace + '}';
     }
+
     
     
 }
